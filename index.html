@@ -20,6 +20,13 @@
     
             }
 
+            /*
+            div.creature {
+                background-color: yellow;
+                border: 2px solid red;
+            }
+                */
+
         </style>
     </head>   
     <body>
@@ -43,7 +50,7 @@
             <li>insect: dashed orange</li>
         </ul>
     </div>
-    <div class="creature">    
+    <div class="creature" data-home="land" data-creature-type="animal">    
         <img src="images/monkey.png" alt="monkey">
         <h3>Monkey</h3>
         <p>Monkeys are cute, but don't try to cuddle them.</p>
@@ -99,7 +106,17 @@
                 if creature lives in air, yellow
                 
                 */
-               alert("showHome()");
+
+                const myNodeList = document.querySelectorAll("div.creature");
+                console.log(myNodeList);
+
+                for(let x=0;x<myNodeList.length;x++){
+                    myNodeList[x].style.backgroundColor = "yellow";
+                }
+
+
+
+               //alert("showHome()");
             
         }//end showHome()
         
